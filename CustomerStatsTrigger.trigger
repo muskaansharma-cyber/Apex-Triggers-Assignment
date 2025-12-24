@@ -1,6 +1,5 @@
 trigger CustomerStatsTrigger on Order (after insert) {
 
-    // Collect Person Account IDs
     Set<Id> personAccountIds = new Set<Id>();
     for (Order ord : Trigger.new) {
         if (ord.AccountId != null) {
