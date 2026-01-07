@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Patient Details">
+        <template if:true={patient}>
+            <div class="slds-p-around_medium">
+                <lightning-avatar
+                    src={patient.Photo__c}
+                    alternative-text={patient.Name}
+                    size="large">
+                </lightning-avatar>
+
+                <p><strong>Name:</strong> {patient.Name}</p>
+                <p><strong>Allergies:</strong> {patient.Allergies__c}</p>
+
+                <lightning-button label="Call to Room" onclick={callPatient}></lightning-button>
+            </div>
+        </template>
+        <template if:false={patient}>
+            <p class="slds-p-around_medium">Select a patient from the waiting list</p>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Patient Info">
+        <div class="slds-p-around_medium">
+            <lightning-input
+                label="Patient Name"
+                value={name}
+                onchange={handleChange}>
+            </lightning-input>
+
+            <lightning-input
+                label="Phone"
+                value={phone}
+                onchange={handleChange}>
+            </lightning-input>
+        </div>
+    </lightning-card>
+</template>

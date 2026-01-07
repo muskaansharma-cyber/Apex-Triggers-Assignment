@@ -1,0 +1,18 @@
+<template>
+    <lightning-input
+        label="Latitude"
+        type="number"
+        data-field="Latitude__c"
+        onchange={handleChange}>
+    </lightning-input>
+
+    <lightning-input
+        label="Longitude"
+        type="number"
+        data-field="Longitude__c"
+        onchange={handleChange}>
+    </lightning-input>
+
+    <lightning-button label="Back" onclick={back}></lightning-button>
+    <lightning-button label="Next" variant="brand" onclick={next}></lightning-button>
+</template>

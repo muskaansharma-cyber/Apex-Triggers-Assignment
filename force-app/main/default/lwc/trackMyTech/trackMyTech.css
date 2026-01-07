@@ -1,0 +1,32 @@
+.container {
+    max-width: 420px;
+    margin: auto;
+    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.step {
+    padding: 12px;
+    text-align: center;
+    background: #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.step.done {
+    background: #2e844a;
+    color: white;
+}
+
+.error {
+    color: red;
+    text-align: center;
+}
+

@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="New Listing Wizard">
+
+        <template if:true={isStep1}>
+            <c-listing-info-step
+                draft={draft}
+                onnext={handleNext}>
+            </c-listing-info-step>
+        </template>
+
+        <template if:true={isStep2}>
+            <c-listing-map-step
+                draft={draft}
+                onnext={handleNext}
+                onback={handleBack}>
+            </c-listing-map-step>
+        </template>
+
+        <template if:true={isStep3}>
+            <c-listing-media-step
+                draft={draft}
+                onsubmit={handleSubmit}
+                onback={handleBack}>
+            </c-listing-media-step>
+        </template>
+
+    </lightning-card>
+</template>

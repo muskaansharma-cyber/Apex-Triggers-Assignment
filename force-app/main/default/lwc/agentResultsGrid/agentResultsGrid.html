@@ -1,0 +1,13 @@
+<template>
+    <template if:true={agents}>
+        <div class="grid">
+            <template for:each={agents} for:item="agent">
+                <div key={agent.Id} class="card">
+                    <p><strong>{agent.Name}</strong></p>
+                    <p>{agent.City}</p>
+                    <p>{agent.Language__c}</p>
+                </div>
+            </template>
+        </div>
+    </template>
+</template>

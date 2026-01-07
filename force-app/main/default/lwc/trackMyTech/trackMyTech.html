@@ -1,0 +1,30 @@
+<template>
+    <div class="container">
+
+        <template if:true={error}>
+            <p class="error">{error}</p>
+        </template>
+
+        <template if:true={data}>
+            <h2>Where is my Technician?</h2>
+
+            <p><strong>Technician:</strong> {data.technician}</p>
+            <p><strong>ETA:</strong> {data.eta}</p>
+
+            <div class="timeline">
+                <div class={orderedDone ? 'step done' : 'step'}>
+                    Ordered
+                </div>
+
+                <div class={dispatchedDone ? 'step done' : 'step'}>
+                    Dispatched
+                </div>
+
+                <div class={arrivingDone ? 'step done' : 'step'}>
+                    Arriving
+                </div>
+            </div>
+        </template>
+
+    </div>
+</template>

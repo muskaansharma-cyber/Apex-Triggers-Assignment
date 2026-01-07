@@ -1,0 +1,29 @@
+<template>
+    <div class="dashboard">
+
+        <header class="header">
+            <h1>Patient Check-In</h1>
+            <lightning-button
+                variant="brand"
+                label="Save All"
+                onclick={handleSaveAll}>
+            </lightning-button>
+        </header>
+
+        <aside class="sidebar">
+            <p>Reception Dashboard</p>
+            <ul>
+                <li>Patient Info</li>
+                <li>Insurance</li>
+                <li>Vitals</li>
+            </ul>
+        </aside>
+
+        <main class="main">
+            <c-patient-info-form></c-patient-info-form>
+            <c-insurance-form></c-insurance-form>
+            <c-vitals-form></c-vitals-form>
+        </main>
+
+    </div>
+</template>

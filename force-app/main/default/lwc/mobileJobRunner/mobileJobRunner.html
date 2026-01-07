@@ -1,0 +1,14 @@
+<template>
+    <div class="mobile-job-runner">
+        <c-safety-check-step oncompleted={handleStepCompleted}></c-safety-check-step>
+        <c-parts-used-step oncompleted={handleStepCompleted}></c-parts-used-step>
+        <c-signature-step oncompleted={handleStepCompleted}></c-signature-step>
+
+        <lightning-button
+            label="Complete"
+            onclick={handleCompleteJob}
+            disabled={!isCompleteEnabled}
+            class="slds-m-top_medium">
+        </lightning-button>
+    </div>
+</template>

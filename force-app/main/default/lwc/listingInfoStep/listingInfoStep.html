@@ -1,0 +1,40 @@
+<template>
+    <div class="grid">
+        <lightning-input
+            label="Property Name"
+            data-field="Name"
+            value={name}
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input
+            label="Price"
+            type="number"
+            data-field="Amount"
+            value={amount}
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input
+            label="Close Date"
+            type="date"
+            data-field="CloseDate"
+            value={closeDate}
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-combobox
+            label="Stage"
+            data-field="StageName"
+            value={stage}
+            options={stageOptions}
+            onchange={handleChange}>
+        </lightning-combobox>
+    </div>
+
+    <lightning-button
+        label="Next"
+        variant="brand"
+        onclick={next}>
+    </lightning-button>
+</template>
